@@ -1,6 +1,6 @@
 node {
 	def application = "sprintbootapp"
-	def dockerhubaccountid = "docketHub"
+	def dockerhubaccountid = "azia0613"
 	stage('Clone repository') {
 		checkout scm
 	}
@@ -10,7 +10,7 @@ node {
 	}
 
 	stage('Push image') {
-		withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
+		withDockerRegistry([ credentialsId: "azia0613", url: "" ]) {
 		app.push()
 		app.push("latest")
 	}
